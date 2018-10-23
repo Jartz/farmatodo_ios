@@ -13,6 +13,13 @@
 		A416BEA0217EA657009D0BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A416BE9E217EA657009D0BC9 /* Main.storyboard */; };
 		A416BEA2217EA65D009D0BC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A416BEA1217EA65D009D0BC9 /* Assets.xcassets */; };
 		A416BEA5217EA65D009D0BC9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A416BEA3217EA65D009D0BC9 /* LaunchScreen.storyboard */; };
+		A416BEB1217EAB11009D0BC9 /* mStringMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB0217EAB11009D0BC9 /* mStringMath.swift */; };
+		A416BEB3217EABF5009D0BC9 /* mMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB2217EABF5009D0BC9 /* mMarvel.swift */; };
+		A416BEB5217EAC0C009D0BC9 /* stringMathViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB4217EAC0C009D0BC9 /* stringMathViewModel.swift */; };
+		A416BEB7217EAC20009D0BC9 /* marvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB6217EAC20009D0BC9 /* marvelViewModel.swift */; };
+		A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */; };
+		A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEBA217EAC6E009D0BC9 /* MarvelController.swift */; };
+		A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEBC217EAC8F009D0BC9 /* DetailMarvelController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +30,13 @@
 		A416BEA1217EA65D009D0BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A416BEA4217EA65D009D0BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A416BEA6217EA65E009D0BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A416BEB0217EAB11009D0BC9 /* mStringMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mStringMath.swift; sourceTree = "<group>"; };
+		A416BEB2217EABF5009D0BC9 /* mMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mMarvel.swift; sourceTree = "<group>"; };
+		A416BEB4217EAC0C009D0BC9 /* stringMathViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stringMathViewModel.swift; sourceTree = "<group>"; };
+		A416BEB6217EAC20009D0BC9 /* marvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = marvelViewModel.swift; sourceTree = "<group>"; };
+		A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMathController.swift; sourceTree = "<group>"; };
+		A416BEBA217EAC6E009D0BC9 /* MarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelController.swift; sourceTree = "<group>"; };
+		A416BEBC217EAC8F009D0BC9 /* DetailMarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMarvelController.swift; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -69,6 +83,10 @@
 		A416BE99217EA657009D0BC9 /* Farmatodo */ = {
 			isa = PBXGroup;
 			children = (
+				A416BEAC217EAA22009D0BC9 /* model */,
+				A416BEAD217EAA29009D0BC9 /* modelView */,
+				A416BEAF217EAA47009D0BC9 /* view */,
+				A416BEAE217EAA35009D0BC9 /* controller */,
 				A416BE9A217EA657009D0BC9 /* AppDelegate.swift */,
 				A416BE9C217EA657009D0BC9 /* ViewController.swift */,
 				A416BE9E217EA657009D0BC9 /* Main.storyboard */,
@@ -77,6 +95,57 @@
 				A416BEA6217EA65E009D0BC9 /* Info.plist */,
 			);
 			path = Farmatodo;
+			sourceTree = "<group>";
+		};
+		A416BEAC217EAA22009D0BC9 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				A416BEB0217EAB11009D0BC9 /* mStringMath.swift */,
+				A416BEB2217EABF5009D0BC9 /* mMarvel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		A416BEAD217EAA29009D0BC9 /* modelView */ = {
+			isa = PBXGroup;
+			children = (
+				A416BEB4217EAC0C009D0BC9 /* stringMathViewModel.swift */,
+				A416BEB6217EAC20009D0BC9 /* marvelViewModel.swift */,
+			);
+			path = modelView;
+			sourceTree = "<group>";
+		};
+		A416BEAE217EAA35009D0BC9 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				A416BEBF217EACC6009D0BC9 /* Marvel */,
+				A416BEBE217EACB3009D0BC9 /* stringMath */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		A416BEAF217EAA47009D0BC9 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		A416BEBE217EACB3009D0BC9 /* stringMath */ = {
+			isa = PBXGroup;
+			children = (
+				A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */,
+			);
+			path = stringMath;
+			sourceTree = "<group>";
+		};
+		A416BEBF217EACC6009D0BC9 /* Marvel */ = {
+			isa = PBXGroup;
+			children = (
+				A416BEBA217EAC6E009D0BC9 /* MarvelController.swift */,
+				A416BEBC217EAC8F009D0BC9 /* DetailMarvelController.swift */,
+			);
+			path = Marvel;
 			sourceTree = "<group>";
 		};
 		DDD2FB17C93E6A16C74F7393 /* Pods */ = {
@@ -200,8 +269,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A416BEB3217EABF5009D0BC9 /* mMarvel.swift in Sources */,
 				A416BE9D217EA657009D0BC9 /* ViewController.swift in Sources */,
+				A416BEB1217EAB11009D0BC9 /* mStringMath.swift in Sources */,
+				A416BEB5217EAC0C009D0BC9 /* stringMathViewModel.swift in Sources */,
+				A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */,
+				A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */,
+				A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */,
 				A416BE9B217EA657009D0BC9 /* AppDelegate.swift in Sources */,
+				A416BEB7217EAC20009D0BC9 /* marvelViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
