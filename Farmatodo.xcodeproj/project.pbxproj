@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		186C78F1D7257C044491BF5C /* Pods_Farmatodo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */; };
 		A416BE9B217EA657009D0BC9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BE9A217EA657009D0BC9 /* AppDelegate.swift */; };
 		A416BE9D217EA657009D0BC9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BE9C217EA657009D0BC9 /* ViewController.swift */; };
 		A416BEA0217EA657009D0BC9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A416BE9E217EA657009D0BC9 /* Main.storyboard */; };
@@ -22,6 +23,9 @@
 		A416BEA1217EA65D009D0BC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A416BEA4217EA65D009D0BC9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A416BEA6217EA65E009D0BC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
+		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				186C78F1D7257C044491BF5C /* Pods_Farmatodo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5FAB78815C64F4FC9D67B9A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A416BE8E217EA657009D0BC9 = {
 			isa = PBXGroup;
 			children = (
 				A416BE99217EA657009D0BC9 /* Farmatodo */,
 				A416BE98217EA657009D0BC9 /* Products */,
+				DDD2FB17C93E6A16C74F7393 /* Pods */,
+				5FAB78815C64F4FC9D67B9A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = Farmatodo;
 			sourceTree = "<group>";
 		};
+		DDD2FB17C93E6A16C74F7393 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */,
+				B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A416BEA9217EA65E009D0BC9 /* Build configuration list for PBXNativeTarget "Farmatodo" */;
 			buildPhases = (
+				B8D5F48CE5B264C1127AB026 /* [CP] Check Pods Manifest.lock */,
 				A416BE93217EA657009D0BC9 /* Sources */,
 				A416BE94217EA657009D0BC9 /* Frameworks */,
 				A416BE95217EA657009D0BC9 /* Resources */,
+				8AAB5869A520486486971C63 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8AAB5869A520486486971C63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8D5F48CE5B264C1127AB026 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Farmatodo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A416BE93217EA657009D0BC9 /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		A416BEAA217EA65E009D0BC9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +362,7 @@
 		};
 		A416BEAB217EA65E009D0BC9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
