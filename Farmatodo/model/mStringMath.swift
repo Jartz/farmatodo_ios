@@ -8,6 +8,10 @@
 
 import Foundation
 
-struct mStringMath: Decodable {
-    let stingMath: String
+class mStringMath {
+    let data: String
+    
+    init(data:String) {
+        self.data = data
+    }
 }

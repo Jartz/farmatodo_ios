@@ -6,4 +6,14 @@
 //  Copyright © 2018 Elitedsh S.A.S. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class MarvelController: UIViewController {
+    
+    override func viewDidLoad(){
+        super.viewDidLoad()
+        view.backgroundColor = .white
+        
+        
+    }
+}

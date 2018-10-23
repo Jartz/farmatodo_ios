@@ -20,6 +20,7 @@
 		A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */; };
 		A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEBA217EAC6E009D0BC9 /* MarvelController.swift */; };
 		A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEBC217EAC8F009D0BC9 /* DetailMarvelController.swift */; };
+		A416BEC1217ED190009D0BC9 /* SetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC0217ED190009D0BC9 /* SetupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringMathController.swift; sourceTree = "<group>"; };
 		A416BEBA217EAC6E009D0BC9 /* MarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelController.swift; sourceTree = "<group>"; };
 		A416BEBC217EAC8F009D0BC9 /* DetailMarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMarvelController.swift; sourceTree = "<group>"; };
+		A416BEC0217ED190009D0BC9 /* SetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupView.swift; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				A416BEB8217EAC5F009D0BC9 /* StringMathController.swift */,
+				A416BEC0217ED190009D0BC9 /* SetupView.swift */,
 			);
 			path = stringMath;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */,
 				A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */,
 				A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */,
+				A416BEC1217ED190009D0BC9 /* SetupView.swift in Sources */,
 				A416BE9B217EA657009D0BC9 /* AppDelegate.swift in Sources */,
 				A416BEB7217EAC20009D0BC9 /* marvelViewModel.swift in Sources */,
 			);
