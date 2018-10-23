@@ -6,6 +6,8 @@ target 'Farmatodo' do
   use_frameworks!
 
   # Pods for Farmatodo
+  pod 'SDWebImage/WebP'
   pod 'Alamofire', '~> 4.7'
+  pod 'SwiftyJSON', '~> 4.0'
 
 end

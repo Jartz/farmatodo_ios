@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+struct mMarvel: Decodable {
+    let id: Int
+    let title: String
+    let description: String
+    let thumbnail : String
+}
