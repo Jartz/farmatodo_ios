@@ -34,4 +34,46 @@ class stringMathViewModel {
         }
     }
     
+    func validateMultiple()->String
+    {
+        let currentValue = Int(calculateString())
+        let mulptiples = [3,5,7,11,13]
+        if (currentValue == 0){
+            return "characters"
+        }
+        else{
+            for multiple in mulptiples {
+                if ((currentValue! % multiple) == 0) {
+                    print("Is multiple :", multiple)
+                    return String(multiple)
+                }
+            }
+        }
+        return "default"
+    }
+    
+    
+    func getApi()->String{
+        let value = validateMultiple().trimmingCharacters(in: .whitespaces)
+       
+        print(value)
+        
+        switch value{
+        case "0":
+            return "characters"
+        case "3":
+            return "comics"
+        case "5":
+            return "comics"
+        case "7":
+            return "creators"
+        case "11":
+            return "events"
+        case "13":
+            return "series"
+        default:
+            return "stories"
+        }
+    }
+    
 }

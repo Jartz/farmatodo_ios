@@ -11,6 +11,7 @@ import SDWebImage
 
 class DetailMarvelController: UIViewController {
     
+    var ApiRoute = String()
     var idMarvelCard = Int()
     var detailMarvelViewModels = [DetailMarvelViewModel]()
     
@@ -29,7 +30,8 @@ class DetailMarvelController: UIViewController {
     
     
     fileprivate func fetchData() {
-        let paramenters = ["comics",String(idMarvelCard)]
+        print(ApiRoute)
+        let paramenters = [ApiRoute,String(idMarvelCard)]
         Service.shared.fetchParticularMarvel(with: paramenters , completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
