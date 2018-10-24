@@ -23,6 +23,18 @@ extension MarvelController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(back))
     }
     
+    @objc public func back(){
+        print("back")
+        self.navigationController?.dismiss(animated: false, completion:nil);
+    }
+    
+     func setupTableView() {
+        tableView.register(MarvelCell.self, forCellReuseIdentifier: cellId)
+        tableView.backgroundColor = .white
+        tableView.rowHeight = 150
+        tableView.tableFooterView = UIView()
+    }
+    
   
 }
  

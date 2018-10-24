@@ -1,4 +1,4 @@
-//
+
 //  MarvelController.swift
 //  Farmatodo
 //
@@ -24,7 +24,7 @@ class MarvelController: UITableViewController {
     
     
     fileprivate func fetchData() {
-        Service.shared.fetchCourses (with: "comics", completion: { (responseMarvel, err) in
+        Service.shared.fetchCategory (with: "comics", completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
                 return
@@ -34,9 +34,17 @@ class MarvelController: UITableViewController {
         })
     }
     
-    @objc func back(){
-        print("back")
-        self.navigationController?.dismiss(animated: false, completion:nil);
+  
+    
+    @objc func goDetailCard(sender : UITapGestureRecognizer){
+        let indexpath = sender.view!.tag
+        let marvelViewModel = marvelViewModels[indexpath]
+        print(marvelViewModel.id)
+        
+        let detailMarvelController  = DetailMarvelController()
+        detailMarvelController.idMarvelCard =  marvelViewModel.id
+        let navigationController = UINavigationController(rootViewController:detailMarvelController)
+        self.present(navigationController, animated: true, completion: nil)
     }
    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,15 +55,12 @@ class MarvelController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MarvelCell
         let rowMarvel = marvelViewModels[indexPath.row]
         cell.marvelViewModel = rowMarvel
+        cell.ContainerPrincipal.tag = indexPath.row
+        cell.ContainerPrincipal.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(goDetailCard)))
         return cell
     }
     
-    fileprivate func setupTableView() {
-        tableView.register(MarvelCell.self, forCellReuseIdentifier: cellId)
-        tableView.backgroundColor = .white
-        tableView.rowHeight = 150
-        tableView.tableFooterView = UIView()
-    }
+    
 }
 
 extension UIColor {
