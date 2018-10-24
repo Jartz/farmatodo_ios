@@ -31,7 +31,6 @@ class MarvelCell: UITableViewCell {
             descriptionCard.text = marvelViewModel.description
             
             let URLString = (marvelViewModel?.thumbnail)!
-            print(URLString)
             imgLocal.sd_setImage(with: URL(string:URLString), placeholderImage: UIImage(named: "none"))
    
         }
@@ -151,9 +150,7 @@ class MarvelCell: UITableViewCell {
         separationLine.leftAnchor.constraint(equalTo: ContainerPrincipal.leftAnchor).isActive = true
         separationLine.rightAnchor.constraint(equalTo: ContainerPrincipal.rightAnchor).isActive = true
         separationLine.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
-        
-        
+       
     }
     
     

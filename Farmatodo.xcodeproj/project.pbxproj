@@ -24,6 +24,9 @@
 		A416BEC4217F64E8009D0BC9 /* vMarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC3217F64E8009D0BC9 /* vMarvelController.swift */; };
 		A416BEC7217F7182009D0BC9 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC6217F7182009D0BC9 /* MarvelService.swift */; };
 		A416BECA217F7E5E009D0BC9 /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC9217F7E5E009D0BC9 /* MarvelCell.swift */; };
+		A4522D0A217FFFB900CFD167 /* vDetailMarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D09217FFFB900CFD167 /* vDetailMarvelController.swift */; };
+		A4522D0C218003A900CFD167 /* mDetailMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0B218003A900CFD167 /* mDetailMarvel.swift */; };
+		A4522D0E218005CB00CFD167 /* DetailMarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +48,9 @@
 		A416BEC3217F64E8009D0BC9 /* vMarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vMarvelController.swift; sourceTree = "<group>"; };
 		A416BEC6217F7182009D0BC9 /* MarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		A416BEC9217F7E5E009D0BC9 /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
+		A4522D09217FFFB900CFD167 /* vDetailMarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vDetailMarvelController.swift; sourceTree = "<group>"; };
+		A4522D0B218003A900CFD167 /* mDetailMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mDetailMarvel.swift; sourceTree = "<group>"; };
+		A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMarvelViewModel.swift; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -93,7 +99,7 @@
 			children = (
 				A416BEC2217F645C009D0BC9 /* service */,
 				A416BEAC217EAA22009D0BC9 /* model */,
-				A416BEAD217EAA29009D0BC9 /* modelView */,
+				A416BEAD217EAA29009D0BC9 /* viewModel */,
 				A416BEAF217EAA47009D0BC9 /* view */,
 				A416BE9A217EA657009D0BC9 /* AppDelegate.swift */,
 				A416BE9C217EA657009D0BC9 /* ViewController.swift */,
@@ -110,17 +116,19 @@
 			children = (
 				A416BEB0217EAB11009D0BC9 /* mStringMath.swift */,
 				A416BEB2217EABF5009D0BC9 /* mMarvel.swift */,
+				A4522D0B218003A900CFD167 /* mDetailMarvel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
 		};
-		A416BEAD217EAA29009D0BC9 /* modelView */ = {
+		A416BEAD217EAA29009D0BC9 /* viewModel */ = {
 			isa = PBXGroup;
 			children = (
 				A416BEB4217EAC0C009D0BC9 /* stringMathViewModel.swift */,
 				A416BEB6217EAC20009D0BC9 /* MarvelViewModel.swift */,
+				A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */,
 			);
-			path = modelView;
+			path = viewModel;
 			sourceTree = "<group>";
 		};
 		A416BEAE217EAA35009D0BC9 /* controller */ = {
@@ -170,8 +178,9 @@
 			isa = PBXGroup;
 			children = (
 				A416BEC8217F7E43009D0BC9 /* cell */,
-				A416BEC3217F64E8009D0BC9 /* vMarvelController.swift */,
 				A416BEC0217ED190009D0BC9 /* vStringMath.swift */,
+				A416BEC3217F64E8009D0BC9 /* vMarvelController.swift */,
+				A4522D09217FFFB900CFD167 /* vDetailMarvelController.swift */,
 			);
 			path = layout;
 			sourceTree = "<group>";
@@ -318,11 +327,14 @@
 				A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */,
 				A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */,
 				A416BECA217F7E5E009D0BC9 /* MarvelCell.swift in Sources */,
+				A4522D0C218003A900CFD167 /* mDetailMarvel.swift in Sources */,
 				A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */,
 				A416BEC1217ED190009D0BC9 /* vStringMath.swift in Sources */,
 				A416BE9B217EA657009D0BC9 /* AppDelegate.swift in Sources */,
 				A416BEB7217EAC20009D0BC9 /* MarvelViewModel.swift in Sources */,
+				A4522D0E218005CB00CFD167 /* DetailMarvelViewModel.swift in Sources */,
 				A416BEC7217F7182009D0BC9 /* MarvelService.swift in Sources */,
+				A4522D0A217FFFB900CFD167 /* vDetailMarvelController.swift in Sources */,
 				A416BEC4217F64E8009D0BC9 /* vMarvelController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
