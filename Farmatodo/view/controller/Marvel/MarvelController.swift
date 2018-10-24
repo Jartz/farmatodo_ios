@@ -12,7 +12,9 @@ import SwiftyJSON
 
 class MarvelController: UITableViewController {
     
+    
     var marvelViewModels = [MarvelViewModel]()
+    var ApiRoute = String()
     let cellId = "cellId"
     
     override func viewDidLoad() {
@@ -24,7 +26,8 @@ class MarvelController: UITableViewController {
     
     
     fileprivate func fetchData() {
-        Service.shared.fetchCategory (with: "comics", completion: { (responseMarvel, err) in
+        marvelViewModels.removeAll()
+        Service.shared.fetchCategory (with: ApiRoute, completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
                 return
@@ -43,6 +46,7 @@ class MarvelController: UITableViewController {
         
         let detailMarvelController  = DetailMarvelController()
         detailMarvelController.idMarvelCard =  marvelViewModel.id
+        detailMarvelController.ApiRoute = ApiRoute
         let navigationController = UINavigationController(rootViewController:detailMarvelController)
         self.present(navigationController, animated: true, completion: nil)
     }

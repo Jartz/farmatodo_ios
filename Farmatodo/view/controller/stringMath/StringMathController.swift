@@ -23,8 +23,14 @@ class StringMathController: UIViewController {
     @objc func calculate(){
         print("calculando")
         let MathViewModel  = stringMathViewModel(math: mStringMath(data:tfStringMath.text!))
+        
+        let ApiRoute = MathViewModel.getApi()
+        print(ApiRoute)
+        print("=================")
         //self.alert(message:MathViewModel.calculateString())
+        
         let marvelController =  MarvelController()
+        marvelController.ApiRoute = ApiRoute
         let navigationController = UINavigationController(rootViewController: marvelController)
         present(navigationController, animated: true, completion: nil)
     }

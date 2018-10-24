@@ -11,8 +11,11 @@ class Service: NSObject {
     
     func fetchCategory(with typeApi: String,completion: @escaping ([MarvelViewModel]?, Error?) -> ()) {
         
-        let authUrl = "?limit=90&offset=10&ts=1&apikey=dec7f80f06d17153585da30e7053afd3&hash=d30fe2332c3b53e4893ae11e0c2de567"
+        marvelViewModels.removeAll()
+        
+        let authUrl = "?limit=20&offset=10&ts=1&apikey=dec7f80f06d17153585da30e7053afd3&hash=d30fe2332c3b53e4893ae11e0c2de567"
         let urlString = "https://gateway.marvel.com/v1/public/"+typeApi+authUrl
+        print(urlString)
         
         DispatchQueue.main.async {
             Alamofire.request(urlString).responseJSON(completionHandler: { (response) in
@@ -20,8 +23,7 @@ class Service: NSObject {
                 case .success(let value):
                     let json = JSON(value)
                     let data = json["data"]
-                    let result = data["results"]
-                    print(result)
+                    //print(result)
                     data["results"].array?.forEach({ (result) in
                         let thumbnail = result["thumbnail"]
                         let thumbnailFinal = thumbnail["path"].stringValue + "/portrait_xlarge." + thumbnail["extension"].stringValue
@@ -53,8 +55,7 @@ class Service: NSObject {
                 case .success(let value):
                     let json = JSON(value)
                     let data = json["data"]
-                    let result = data["results"]
-                    print(result)
+                    //print(result)
                     data["results"].array?.forEach({ (result) in
                         
                         let thumbnail = result["thumbnail"]
