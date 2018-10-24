@@ -28,10 +28,18 @@
 		A4522D0C218003A900CFD167 /* mDetailMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0B218003A900CFD167 /* mDetailMarvel.swift */; };
 		A4522D0E218005CB00CFD167 /* DetailMarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */; };
 		A4522D162180CFDE00CFD167 /* FarmatodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D152180CFDE00CFD167 /* FarmatodoTests.swift */; };
+		A4522D242180FC8800CFD167 /* FarmatodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		A4522D182180CFDE00CFD167 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A416BE8F217EA657009D0BC9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A416BE96217EA657009D0BC9;
+			remoteInfo = Farmatodo;
+		};
+		A4522D262180FC8800CFD167 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A416BE8F217EA657009D0BC9 /* Project object */;
 			proxyType = 1;
@@ -65,6 +73,9 @@
 		A4522D132180CFDE00CFD167 /* FarmatodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmatodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4522D152180CFDE00CFD167 /* FarmatodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmatodoTests.swift; sourceTree = "<group>"; };
 		A4522D172180CFDE00CFD167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4522D212180FC8800CFD167 /* FarmatodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmatodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmatodoUITests.swift; sourceTree = "<group>"; };
+		A4522D252180FC8800CFD167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +91,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A4522D102180CFDE00CFD167 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4522D1E2180FC8800CFD167 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -102,6 +120,7 @@
 			children = (
 				A416BE99217EA657009D0BC9 /* Farmatodo */,
 				A4522D142180CFDE00CFD167 /* FarmatodoTests */,
+				A4522D222180FC8800CFD167 /* FarmatodoUITests */,
 				A416BE98217EA657009D0BC9 /* Products */,
 				DDD2FB17C93E6A16C74F7393 /* Pods */,
 				5FAB78815C64F4FC9D67B9A9 /* Frameworks */,
@@ -113,6 +132,7 @@
 			children = (
 				A416BE97217EA657009D0BC9 /* Farmatodo.app */,
 				A4522D132180CFDE00CFD167 /* FarmatodoTests.xctest */,
+				A4522D212180FC8800CFD167 /* FarmatodoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -225,6 +245,15 @@
 			path = FarmatodoTests;
 			sourceTree = "<group>";
 		};
+		A4522D222180FC8800CFD167 /* FarmatodoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */,
+				A4522D252180FC8800CFD167 /* Info.plist */,
+			);
+			path = FarmatodoUITests;
+			sourceTree = "<group>";
+		};
 		DDD2FB17C93E6A16C74F7393 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +303,24 @@
 			productReference = A4522D132180CFDE00CFD167 /* FarmatodoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		A4522D202180FC8800CFD167 /* FarmatodoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4522D2A2180FC8800CFD167 /* Build configuration list for PBXNativeTarget "FarmatodoUITests" */;
+			buildPhases = (
+				A4522D1D2180FC8800CFD167 /* Sources */,
+				A4522D1E2180FC8800CFD167 /* Frameworks */,
+				A4522D1F2180FC8800CFD167 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4522D272180FC8800CFD167 /* PBXTargetDependency */,
+			);
+			name = FarmatodoUITests;
+			productName = FarmatodoUITests;
+			productReference = A4522D212180FC8800CFD167 /* FarmatodoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -288,6 +335,10 @@
 						CreatedOnToolsVersion = 10.0;
 					};
 					A4522D122180CFDE00CFD167 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = A416BE96217EA657009D0BC9;
+					};
+					A4522D202180FC8800CFD167 = {
 						CreatedOnToolsVersion = 10.0;
 						TestTargetID = A416BE96217EA657009D0BC9;
 					};
@@ -308,6 +359,7 @@
 			targets = (
 				A416BE96217EA657009D0BC9 /* Farmatodo */,
 				A4522D122180CFDE00CFD167 /* FarmatodoTests */,
+				A4522D202180FC8800CFD167 /* FarmatodoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,6 +376,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A4522D112180CFDE00CFD167 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4522D1F2180FC8800CFD167 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -409,6 +468,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A4522D1D2180FC8800CFD167 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4522D242180FC8800CFD167 /* FarmatodoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -416,6 +483,11 @@
 			isa = PBXTargetDependency;
 			target = A416BE96217EA657009D0BC9 /* Farmatodo */;
 			targetProxy = A4522D182180CFDE00CFD167 /* PBXContainerItemProxy */;
+		};
+		A4522D272180FC8800CFD167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A416BE96217EA657009D0BC9 /* Farmatodo */;
+			targetProxy = A4522D262180FC8800CFD167 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -631,6 +703,44 @@
 			};
 			name = Release;
 		};
+		A4522D282180FC8800CFD167 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4Z75SL8Y9;
+				INFOPLIST_FILE = FarmatodoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Elitedsh.FarmatodoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Farmatodo;
+			};
+			name = Debug;
+		};
+		A4522D292180FC8800CFD167 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = K4Z75SL8Y9;
+				INFOPLIST_FILE = FarmatodoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Elitedsh.FarmatodoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Farmatodo;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -657,6 +767,15 @@
 			buildConfigurations = (
 				A4522D1A2180CFDE00CFD167 /* Debug */,
 				A4522D1B2180CFDE00CFD167 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4522D2A2180FC8800CFD167 /* Build configuration list for PBXNativeTarget "FarmatodoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4522D282180FC8800CFD167 /* Debug */,
+				A4522D292180FC8800CFD167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
