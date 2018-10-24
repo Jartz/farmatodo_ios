@@ -30,6 +30,7 @@ extension StringMathController {
         tfStringMath.placeholder = "Introduce una ecuacion del tipo : 1+1"
         tfStringMath.textAlignment = .center
         tfStringMath.font = UIFont.systemFont(ofSize: 16)
+        tfStringMath.keyboardType = UIKeyboardType.alphabet
         tfStringMath.translatesAutoresizingMaskIntoConstraints = false
         
         btCalculate.translatesAutoresizingMaskIntoConstraints = false
@@ -63,6 +64,11 @@ extension StringMathController {
         btCalculate.widthAnchor.constraint(equalToConstant: 200).isActive = true
     }
     
-
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        tfStringMath.becomeFirstResponder()
+    }
+    
+    
 }
 

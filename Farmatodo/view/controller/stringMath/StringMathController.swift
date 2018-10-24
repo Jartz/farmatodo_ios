@@ -19,20 +19,23 @@ class StringMathController: UIViewController {
         setupNavigationBar()
     }
     
-   
+    
     @objc func calculate(){
         print("calculando")
-        let MathViewModel  = StringMathViewModel(math: mStringMath(data:tfStringMath.text!))
+        let stringMath = tfStringMath.text!
+        let MathViewModel  = StringMathViewModel(math: mStringMath(data:stringMath))
         
-        let ApiRoute = MathViewModel.getApi()
-        print(ApiRoute)
-        print("=================")
-        //self.alert(message:MathViewModel.calculateString())
-        
-        let marvelController =  MarvelController()
-        marvelController.ApiRoute = ApiRoute
-        let navigationController = UINavigationController(rootViewController: marvelController)
-        present(navigationController, animated: true, completion: nil)
+        if(MathViewModel.correctStringEquation()){
+            let ApiRoute = MathViewModel.getApi()
+            let marvelController =  MarvelController()
+            marvelController.ApiRoute = ApiRoute
+            let navigationController = UINavigationController(rootViewController: marvelController)
+            present(navigationController, animated: true, completion: nil)
+            
+        }
+        else{
+            self.alert(message:"Al parecer esta mal tu ecuacion :P")
+        }
     }
     
     func alert(message:String){
@@ -41,6 +44,6 @@ class StringMathController: UIViewController {
         alert.addAction(UIAlertAction(title:"Ok",style: UIAlertAction.Style.default, handler:nil))
         self.present(alert, animated:true, completion:nil)
     }
-      
-   
+    
+    
 }

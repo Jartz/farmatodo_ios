@@ -20,24 +20,31 @@ class StringMathViewModel {
         result = "calculado"
     }
     
+    func correctStringEquation()->Bool{
+        let CaseSigns = ["--","+-","- -","+ -","++", "+ +","CaseSign"]
+        var flag = false
+        for CaseSign in CaseSigns {
+            if (stringMath.contains(CaseSign) || stringMath.isEmpty){
+               return false
+            }else{
+                flag = true
+            }
+        }
+        return flag
+    }
+    
     func calculateString()->String
     {
+        
         if(stringMath.isEmpty){
             return "0"
         }
         else{
             let s = stringMath.replacingOccurrences(of: "x", with: "*")
-            do {
                 let expn = NSExpression(format:s)
                 let result = "\(expn.expressionValue(with: nil, context: nil) ?? 0)"
                 return result
-            }
-            catch {
-                print("Error:")
-                return "Error"
-            }
         }
-        
     }
     
     func validateMultiple()->String
@@ -45,9 +52,9 @@ class StringMathViewModel {
         
         let currentValue = Int(calculateString())
         let mulptiples = [3,5,7,11,13]
-     
+        
         if(calculateString() == "0" || calculateString().isEmpty){
-             return "0"
+            return "0"
         }
         else{
             for multiple in mulptiples {
@@ -63,7 +70,7 @@ class StringMathViewModel {
     
     func getApi()->String{
         let value = validateMultiple().trimmingCharacters(in: .whitespaces)
-       
+        
         print(value)
         
         switch value{
