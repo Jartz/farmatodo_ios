@@ -22,7 +22,7 @@ class StringMathController: UIViewController {
    
     @objc func calculate(){
         print("calculando")
-        let MathViewModel  = stringMathViewModel(math: mStringMath(data:tfStringMath.text!))
+        let MathViewModel  = StringMathViewModel(math: mStringMath(data:tfStringMath.text!))
         
         let ApiRoute = MathViewModel.getApi()
         print(ApiRoute)

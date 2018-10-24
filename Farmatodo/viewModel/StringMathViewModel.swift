@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class stringMathViewModel {
+class StringMathViewModel {
     
     let stringMath: String
     let result: String
@@ -22,24 +22,32 @@ class stringMathViewModel {
     
     func calculateString()->String
     {
-        let s = stringMath.replacingOccurrences(of: "x", with: "*")
-        do {
-        let expn = NSExpression(format:s)
-        let result = "\(expn.expressionValue(with: nil, context: nil) ?? 0)"
-        return result
+        if(stringMath.isEmpty){
+            return "0"
         }
-        catch {
-        print("Error:")
-        return "Error"
+        else{
+            let s = stringMath.replacingOccurrences(of: "x", with: "*")
+            do {
+                let expn = NSExpression(format:s)
+                let result = "\(expn.expressionValue(with: nil, context: nil) ?? 0)"
+                return result
+            }
+            catch {
+                print("Error:")
+                return "Error"
+            }
         }
+        
     }
     
     func validateMultiple()->String
     {
+        
         let currentValue = Int(calculateString())
         let mulptiples = [3,5,7,11,13]
-        if (currentValue == 0){
-            return "characters"
+     
+        if(calculateString() == "0" || calculateString().isEmpty){
+             return "0"
         }
         else{
             for multiple in mulptiples {
