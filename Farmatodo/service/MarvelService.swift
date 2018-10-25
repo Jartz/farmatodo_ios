@@ -25,7 +25,7 @@ class Service: NSObject {
                 case .success(let value):
                     let json = JSON(value)
                     let data = json["data"]
-                    print(data["results"])
+                    //print(data["results"])
                     data["results"].array?.forEach({ (result) in
                         let thumbnail = result["thumbnail"]
                         let thumbnailFinal = thumbnail["path"].stringValue + "/portrait_xlarge." + thumbnail["extension"].stringValue

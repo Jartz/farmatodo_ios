@@ -17,31 +17,33 @@ class MarvelController: UIViewController ,UICollectionViewDelegateFlowLayout,UIC
     let cellId = "cellId"
     var colView: UICollectionView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
         viewAdd()
         fetchData()
-        
     }
     
     
     fileprivate func fetchData() {
         marvelViewModels.removeAll()
+        
+        
         let paramenters = [ApiRoute,"List"]
         Service.shared.fetchData (with: paramenters, completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
                 return
             }
+            
+            
             self.marvelViewModels = responseMarvel!
             self.colView.reloadData()
+            
         })
+        print("tabla cargada")
     }
-    
-  
     
     @objc func goDetailCard(sender : UITapGestureRecognizer){
         let indexpath = sender.view!.tag
@@ -54,7 +56,7 @@ class MarvelController: UIViewController ,UICollectionViewDelegateFlowLayout,UIC
         let navigationController = UINavigationController(rootViewController:detailMarvelController)
         self.present(navigationController, animated: true, completion: nil)
     }
-   
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
@@ -80,10 +82,6 @@ class MarvelController: UIViewController ,UICollectionViewDelegateFlowLayout,UIC
         return CGSize(width: (view.frame.width-20)/2, height: view.frame.height/3)
     }
     
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
-  
 }
 
 

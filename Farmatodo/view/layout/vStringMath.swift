@@ -13,11 +13,9 @@ extension StringMathController {
     
     func setupNavigationBar(){
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black
-       self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
- 
- 
         
         view.backgroundColor = .black
         setupElement()
@@ -144,7 +142,7 @@ extension StringMathController {
         return .lightContent
     }
     
-  
+    
     
     
 }

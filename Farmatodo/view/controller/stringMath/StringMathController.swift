@@ -40,7 +40,10 @@ class StringMathController: UIViewController {
             
         }
         else{
-            self.alert(message:"Al parecer esta mal tu ecuacion :P")
+            let failController =  FailController()
+            let navigationController = UINavigationController(rootViewController: failController)
+            present(navigationController, animated: true, completion: nil)
+            //self.alert(message:"Al parecer esta mal tu ecuacion :P")
         }
     }
     
