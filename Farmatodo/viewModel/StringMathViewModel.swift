@@ -22,7 +22,6 @@ class StringMathViewModel {
     
     
     func isInvalid() -> Bool {
-        guard stringMath != nil else { return false }
         let regEx = "[A-Za-z]"
         let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
         return pred.evaluate(with: stringMath)

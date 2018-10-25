@@ -59,7 +59,8 @@ extension StringMathController {
         lbContent.numberOfLines = 0
         lbFooter.translatesAutoresizingMaskIntoConstraints = false
         
-        tfStringMath.placeholder = "Introduce una ecuacion del tipo : 1+1"
+       
+        tfStringMath.attributedPlaceholder = NSAttributedString(string: "Escribe tu ecuacion : 10+1", attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray ])
         tfStringMath.clipsToBounds = false
         tfStringMath.textAlignment = .center
         tfStringMath.font = UIFont.systemFont(ofSize: 16)

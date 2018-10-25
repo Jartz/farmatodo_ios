@@ -15,6 +15,6 @@ class restApi {
     }
     
     class func auth() -> String {
-        return "?limit=20&offset=10&ts=1&apikey=dec7f80f06d17153585da30e7053afd3&hash=d30fe2332c3b53e4893ae11e0c2de567"
+        return "?limit=10&offset=10&ts=1&apikey=dec7f80f06d17153585da30e7053afd3&hash=d30fe2332c3b53e4893ae11e0c2de567"
     }
 }
