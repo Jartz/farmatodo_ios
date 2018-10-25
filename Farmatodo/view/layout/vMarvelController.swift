@@ -12,28 +12,63 @@ import UIKit
 
 extension MarvelController {
     
-    func setupView(){
-        setupNavigationBar()
-    }
+ 
     
     func setupNavigationBar(){
-        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.2588235294, green: 0.5607843137, blue: 0.8705882353, alpha: 1)
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black;
+        self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.title = self.ApiRoute
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Atras", style: UIBarButtonItem.Style.bordered, target: self, action: #selector(back))
+        
+        
+        
+        
     }
     
+   
     @objc public func back(){
         print("back")
         self.navigationController?.dismiss(animated: false, completion:nil);
     }
     
+   
+    
      func setupTableView() {
-        tableView.register(MarvelCell.self, forCellReuseIdentifier: cellId)
-        tableView.backgroundColor = .white
-        tableView.rowHeight = 150
-        tableView.tableFooterView = UIView()
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 5, bottom: 0, right: 5)
+        layout.minimumLineSpacing = 5
+        colView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        colView.delegate   = self
+        colView.dataSource = self
+        colView.register(MarvelCell.self, forCellWithReuseIdentifier: cellId)
+        colView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
+        colView.clipsToBounds = true
+        colView.translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    func viewAdd(){
+        view.addSubview(colView)
+        setupConstraint()
+    }
+    
+    func setupConstraint(){
+        colView.topAnchor.constraint(equalTo: view.topAnchor,constant:10).isActive = true
+        colView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        colView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        colView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
+    }
+    
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().barStyle = .blackTranslucent
+        return true
+    }
+    
+    
     
   
 }

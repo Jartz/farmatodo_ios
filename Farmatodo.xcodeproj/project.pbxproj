@@ -25,10 +25,9 @@
 		A416BEC7217F7182009D0BC9 /* MarvelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC6217F7182009D0BC9 /* MarvelService.swift */; };
 		A416BECA217F7E5E009D0BC9 /* MarvelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A416BEC9217F7E5E009D0BC9 /* MarvelCell.swift */; };
 		A4522D0A217FFFB900CFD167 /* vDetailMarvelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D09217FFFB900CFD167 /* vDetailMarvelController.swift */; };
-		A4522D0C218003A900CFD167 /* mDetailMarvel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0B218003A900CFD167 /* mDetailMarvel.swift */; };
-		A4522D0E218005CB00CFD167 /* DetailMarvelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */; };
 		A4522D162180CFDE00CFD167 /* FarmatodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D152180CFDE00CFD167 /* FarmatodoTests.swift */; };
 		A4522D242180FC8800CFD167 /* FarmatodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */; };
+		A497B5FC21817F4200B83136 /* restApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497B5FB21817F4200B83136 /* restApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,14 +67,13 @@
 		A416BEC6217F7182009D0BC9 /* MarvelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelService.swift; sourceTree = "<group>"; };
 		A416BEC9217F7E5E009D0BC9 /* MarvelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarvelCell.swift; sourceTree = "<group>"; };
 		A4522D09217FFFB900CFD167 /* vDetailMarvelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = vDetailMarvelController.swift; sourceTree = "<group>"; };
-		A4522D0B218003A900CFD167 /* mDetailMarvel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mDetailMarvel.swift; sourceTree = "<group>"; };
-		A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMarvelViewModel.swift; sourceTree = "<group>"; };
 		A4522D132180CFDE00CFD167 /* FarmatodoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmatodoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4522D152180CFDE00CFD167 /* FarmatodoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmatodoTests.swift; sourceTree = "<group>"; };
 		A4522D172180CFDE00CFD167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4522D212180FC8800CFD167 /* FarmatodoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FarmatodoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmatodoUITests.swift; sourceTree = "<group>"; };
 		A4522D252180FC8800CFD167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A497B5FB21817F4200B83136 /* restApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApi.swift; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -140,6 +138,7 @@
 		A416BE99217EA657009D0BC9 /* Farmatodo */ = {
 			isa = PBXGroup;
 			children = (
+				A497B5FA21817F2000B83136 /* util */,
 				A416BEC2217F645C009D0BC9 /* service */,
 				A416BEAC217EAA22009D0BC9 /* model */,
 				A416BEAD217EAA29009D0BC9 /* viewModel */,
@@ -159,7 +158,6 @@
 			children = (
 				A416BEB0217EAB11009D0BC9 /* mStringMath.swift */,
 				A416BEB2217EABF5009D0BC9 /* mMarvel.swift */,
-				A4522D0B218003A900CFD167 /* mDetailMarvel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -169,7 +167,6 @@
 			children = (
 				A416BEB4217EAC0C009D0BC9 /* StringMathViewModel.swift */,
 				A416BEB6217EAC20009D0BC9 /* MarvelViewModel.swift */,
-				A4522D0D218005CB00CFD167 /* DetailMarvelViewModel.swift */,
 			);
 			path = viewModel;
 			sourceTree = "<group>";
@@ -252,6 +249,14 @@
 				A4522D252180FC8800CFD167 /* Info.plist */,
 			);
 			path = FarmatodoUITests;
+			sourceTree = "<group>";
+		};
+		A497B5FA21817F2000B83136 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				A497B5FB21817F4200B83136 /* restApi.swift */,
+			);
+			path = util;
 			sourceTree = "<group>";
 		};
 		DDD2FB17C93E6A16C74F7393 /* Pods */ = {
@@ -447,13 +452,12 @@
 				A416BEB5217EAC0C009D0BC9 /* StringMathViewModel.swift in Sources */,
 				A416BEBD217EAC8F009D0BC9 /* DetailMarvelController.swift in Sources */,
 				A416BEBB217EAC6E009D0BC9 /* MarvelController.swift in Sources */,
+				A497B5FC21817F4200B83136 /* restApi.swift in Sources */,
 				A416BECA217F7E5E009D0BC9 /* MarvelCell.swift in Sources */,
-				A4522D0C218003A900CFD167 /* mDetailMarvel.swift in Sources */,
 				A416BEB9217EAC5F009D0BC9 /* StringMathController.swift in Sources */,
 				A416BEC1217ED190009D0BC9 /* vStringMath.swift in Sources */,
 				A416BE9B217EA657009D0BC9 /* AppDelegate.swift in Sources */,
 				A416BEB7217EAC20009D0BC9 /* MarvelViewModel.swift in Sources */,
-				A4522D0E218005CB00CFD167 /* DetailMarvelViewModel.swift in Sources */,
 				A416BEC7217F7182009D0BC9 /* MarvelService.swift in Sources */,
 				A4522D0A217FFFB900CFD167 /* vDetailMarvelController.swift in Sources */,
 				A416BEC4217F64E8009D0BC9 /* vMarvelController.swift in Sources */,

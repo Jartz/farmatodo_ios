@@ -13,7 +13,7 @@ class DetailMarvelController: UIViewController {
     
     var ApiRoute = String()
     var idMarvelCard = Int()
-    var detailMarvelViewModels = [DetailMarvelViewModel]()
+    var marvelViewModels = [MarvelViewModel]()
     
     var Header : UIView!
     var lbTag : UILabel!
@@ -32,25 +32,28 @@ class DetailMarvelController: UIViewController {
     fileprivate func fetchData() {
         print(ApiRoute)
         let paramenters = [ApiRoute,String(idMarvelCard)]
-        Service.shared.fetchParticularMarvel(with: paramenters , completion: { (responseMarvel, err) in
+        Service.shared.fetchData(with: paramenters , completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
                 return
             }
-            self.detailMarvelViewModels = responseMarvel!
+            self.marvelViewModels = responseMarvel!
             
-            self.detailMarvelViewModels.forEach({ (DetailMarvelViewModel) in
-                self.lbTag.text =  DetailMarvelViewModel.modified
-                self.lbtitle.text =  DetailMarvelViewModel.title
-                self.lbDescription.text =  DetailMarvelViewModel.description
+            self.marvelViewModels.forEach({ (MarvelViewModel) in
+                self.lbTag.text =  MarvelViewModel.modified
+                self.lbtitle.text =  MarvelViewModel.title
+                self.lbDescription.text =  MarvelViewModel.description
                 
-                let URLString = (DetailMarvelViewModel.thumbnail)
-                self.ivThumbai.sd_setImage(with: URL(string:URLString), placeholderImage: UIImage(named: "none"))
+                let URLString = (MarvelViewModel.thumbnail)
+                self.ivThumbai.sd_setImage(with: URL(string:URLString), placeholderImage: UIImage(named: "nofoto"))
             })
             
         })
     }
     
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
     
 }

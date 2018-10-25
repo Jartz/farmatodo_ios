@@ -16,6 +16,7 @@ struct MarvelViewModel {
     let title: String
     let description: String
     let thumbnail : String
+    let modified: String
     
     // Dependency Injection (DI)
     init(marvel: mMarvel) {
@@ -23,6 +24,7 @@ struct MarvelViewModel {
         self.title = marvel.title
         self.description = marvel.description
         self.thumbnail = marvel.thumbnail
+        self.modified = marvel.modified
     }
     
 }
