@@ -13,4 +13,5 @@ struct mMarvel: Decodable {
     let title: String
     let description: String
     let thumbnail : String
+    let modified : String
 }

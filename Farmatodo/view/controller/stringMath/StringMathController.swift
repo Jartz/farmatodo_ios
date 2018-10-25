@@ -10,15 +10,21 @@ import UIKit
 
 class StringMathController: UIViewController {
     
+    let separation = UIView()
     let tfStringMath = UITextField()
     var btCalculate = UIButton()
+    let ivLogo = UIImageView()
+    let ivHeader = UIImageView()
+    let lbHeader = UILabel()
+    let lbContent = UILabel()
+    let lbFooter = UILabel()
     
     override func viewDidLoad(){
         super.viewDidLoad()
-        view.backgroundColor = .white
         setupNavigationBar()
     }
     
+   
     
     @objc func calculate(){
         print("calculando")

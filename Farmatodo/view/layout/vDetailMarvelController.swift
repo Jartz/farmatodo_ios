@@ -22,13 +22,14 @@ extension DetailMarvelController {
     
     func setupNavigationBar(){
         
+        self.navigationController?.navigationBar.barStyle = UIBarStyle.black
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
-
+        
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.title = String(self.idMarvelCard)
-        navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(back))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Atras", style: UIBarButtonItem.Style.bordered, target: self, action: #selector(back))
     }
     
     @objc public func back(){
@@ -37,15 +38,12 @@ extension DetailMarvelController {
     }
     
     func  addElement(){
-         view.addSubview(Header)
-         Header.addSubview(ivThumbai)
-         view.addSubview(lbTag)
-         view.addSubview(lbDescription)
-         view.addSubview(lbtitle)
-        
+        view.addSubview(Header)
+        Header.addSubview(ivThumbai)
+        view.addSubview(lbTag)
+        view.addSubview(lbDescription)
+        view.addSubview(lbtitle)
     }
-    
-    
     
     func setupElement(){
         
@@ -58,7 +56,7 @@ extension DetailMarvelController {
         lbTag.backgroundColor = .red
         lbTag.textColor = .white
         lbTag.textAlignment = .center
-        lbTag.font = UIFont.systemFont(ofSize: 9)
+        lbTag.font = UIFont.systemFont(ofSize: 11)
         lbTag.translatesAutoresizingMaskIntoConstraints = false
         
         ivThumbai = UIImageView()
@@ -100,7 +98,6 @@ extension DetailMarvelController {
         lbTag.widthAnchor.constraint(equalToConstant: 250).isActive = true
         lbTag.heightAnchor.constraint(equalToConstant: 40).isActive = true
         
-        
         lbtitle.topAnchor.constraint(equalTo: Header.bottomAnchor, constant: 30).isActive = true
         lbtitle.leftAnchor.constraint(equalTo: view.leftAnchor,constant:16).isActive = true
         lbtitle.rightAnchor.constraint(equalTo: view.rightAnchor,constant:-16).isActive = true
@@ -108,7 +105,7 @@ extension DetailMarvelController {
         lbDescription.topAnchor.constraint(equalTo: lbtitle.bottomAnchor, constant: 30).isActive = true
         lbDescription.leftAnchor.constraint(equalTo: view.leftAnchor ,constant:16).isActive = true
         lbDescription.rightAnchor.constraint(equalTo: view.rightAnchor,constant:-16).isActive = true
-       
+        
     }
     
 }

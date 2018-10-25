@@ -1,4 +1,3 @@
-
 //  MarvelController.swift
 //  Farmatodo
 //
@@ -10,30 +9,35 @@ import UIKit
 import Alamofire
 import SwiftyJSON
 
-class MarvelController: UITableViewController {
+class MarvelController: UIViewController ,UICollectionViewDelegateFlowLayout,UICollectionViewDataSource {
     
     
     var marvelViewModels = [MarvelViewModel]()
     var ApiRoute = String()
     let cellId = "cellId"
+    var colView: UICollectionView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
         setupTableView()
+        viewAdd()
         fetchData()
+        
     }
     
     
     fileprivate func fetchData() {
         marvelViewModels.removeAll()
-        Service.shared.fetchCategory (with: ApiRoute, completion: { (responseMarvel, err) in
+        let paramenters = [ApiRoute,"List"]
+        Service.shared.fetchData (with: paramenters, completion: { (responseMarvel, err) in
             if let err = err {
                 print("Failed to fetch courses:", err)
                 return
             }
             self.marvelViewModels = responseMarvel!
-            self.tableView.reloadData()
+            self.colView.reloadData()
         })
     }
     
@@ -51,12 +55,20 @@ class MarvelController: UITableViewController {
         self.present(navigationController, animated: true, completion: nil)
     }
    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return marvelViewModels.count
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! MarvelCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MarvelCell
+        cell.layer.borderColor = UIColor.white.cgColor
+        cell.layer.borderWidth = 0.5
+        
         let rowMarvel = marvelViewModels[indexPath.row]
         cell.marvelViewModel = rowMarvel
         cell.ContainerPrincipal.tag = indexPath.row
@@ -64,17 +76,16 @@ class MarvelController: UITableViewController {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: (view.frame.width-20)/2, height: view.frame.height/3)
+    }
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+  
 }
 
-extension UIColor {
-    static let mainTextBlue = UIColor.rgb(r: 7, g: 71, b: 89)
-    static let highlightColor = UIColor.rgb(r: 50, g: 199, b: 242)
-    
-    static func rgb(r: CGFloat, g: CGFloat, b: CGFloat) -> UIColor {
-        return UIColor(red: r/255, green: g/255, blue: b/255, alpha: 1)
-    }
-}
 
 
 

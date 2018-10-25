@@ -33,13 +33,17 @@ class FarmatodoUITests: XCTestCase {
         let app = XCUIApplication()
         app.textFields["Introduce una ecuacion del tipo : 1+1"].tap()
         app.textFields["Introduce una ecuacion del tipo : 1+1"].typeText("10+10")
-        app.otherElements.containing(.navigationBar, identifier:"Farmatodo.StringMath").children(matching: .other).element.children(matching: .other).element.children(matching: .other).element.tap()
-        app.buttons["Calcular"].tap()
-     
+       
+
+        let calcularEstasSeguroButton = app.buttons["Calcular ¿ Estas Seguro ?"]
+        calcularEstasSeguroButton.tap()
+      
         let table = app.tables.element(boundBy: 0)
         XCTAssertEqual(table.cells.count, 0)
         
-        app.tables/*@START_MENU_TOKEN@*/.staticTexts["UNIVERSE X SPECIAL: CAP 1 (2001)"]/*[[".cells.staticTexts[\"UNIVERSE X SPECIAL: CAP 1 (2001)\"]",".staticTexts[\"UNIVERSE X SPECIAL: CAP 1 (2001)\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
+        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"UNIVERSE X SPECIAL: CAP 1 (2001)").element.tap()
+        app.staticTexts["UNIVERSE X SPECIAL: CAP 1 (2001)"].tap()
+       
         let universeXSpecialCap12001StaticText = app.staticTexts["UNIVERSE X SPECIAL: CAP 1 (2001)"]
         universeXSpecialCap12001StaticText.tap()
         
