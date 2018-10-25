@@ -12,18 +12,12 @@ import UIKit
 
 extension MarvelController {
     
- 
-    
     func setupNavigationBar(){
         self.navigationController?.navigationBar.barStyle = UIBarStyle.black;
         self.navigationController?.navigationBar.barTintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1)
         self.navigationController?.navigationBar.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         self.title = self.ApiRoute
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Atras", style: UIBarButtonItem.Style.bordered, target: self, action: #selector(back))
-        
-        
-        
-        
     }
     
    
@@ -45,7 +39,7 @@ extension MarvelController {
         colView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         colView.clipsToBounds = true
         colView.translatesAutoresizingMaskIntoConstraints = false
-    }
+     }
     
     func viewAdd(){
         view.addSubview(colView)
@@ -58,14 +52,17 @@ extension MarvelController {
         colView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         colView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
+      
     }
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        
         UINavigationBar.appearance().barStyle = .blackTranslucent
         return true
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     

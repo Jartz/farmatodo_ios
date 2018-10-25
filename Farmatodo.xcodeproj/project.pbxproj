@@ -28,6 +28,7 @@
 		A4522D162180CFDE00CFD167 /* FarmatodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D152180CFDE00CFD167 /* FarmatodoTests.swift */; };
 		A4522D242180FC8800CFD167 /* FarmatodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */; };
 		A497B5FC21817F4200B83136 /* restApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497B5FB21817F4200B83136 /* restApi.swift */; };
+		A497B5FF218186E700B83136 /* FailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A497B5FE218186E700B83136 /* FailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		A4522D232180FC8800CFD167 /* FarmatodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmatodoUITests.swift; sourceTree = "<group>"; };
 		A4522D252180FC8800CFD167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A497B5FB21817F4200B83136 /* restApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = restApi.swift; sourceTree = "<group>"; };
+		A497B5FE218186E700B83136 /* FailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailController.swift; sourceTree = "<group>"; };
 		A622CBAE6FFA97C8DD0B3F97 /* Pods_Farmatodo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Farmatodo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B04CABBCCF3E2F0464A4857E /* Pods-Farmatodo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.release.xcconfig"; sourceTree = "<group>"; };
 		F7B0FDDE3280C5F823F83B13 /* Pods-Farmatodo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Farmatodo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Farmatodo/Pods-Farmatodo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 		A416BEAE217EAA35009D0BC9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				A497B5FD218186D300B83136 /* fail */,
 				A416BEBE217EACB3009D0BC9 /* stringMath */,
 				A416BEBF217EACC6009D0BC9 /* Marvel */,
 			);
@@ -257,6 +260,14 @@
 				A497B5FB21817F4200B83136 /* restApi.swift */,
 			);
 			path = util;
+			sourceTree = "<group>";
+		};
+		A497B5FD218186D300B83136 /* fail */ = {
+			isa = PBXGroup;
+			children = (
+				A497B5FE218186E700B83136 /* FailController.swift */,
+			);
+			path = fail;
 			sourceTree = "<group>";
 		};
 		DDD2FB17C93E6A16C74F7393 /* Pods */ = {
@@ -461,6 +472,7 @@
 				A416BEC7217F7182009D0BC9 /* MarvelService.swift in Sources */,
 				A4522D0A217FFFB900CFD167 /* vDetailMarvelController.swift in Sources */,
 				A416BEC4217F64E8009D0BC9 /* vMarvelController.swift in Sources */,
+				A497B5FF218186E700B83136 /* FailController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

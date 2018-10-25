@@ -20,18 +20,33 @@ class StringMathViewModel {
         result = "calculado"
     }
     
+    
+    func isInvalid() -> Bool {
+        guard stringMath != nil else { return false }
+        let regEx = "[A-Za-z]"
+        let pred = NSPredicate(format:"SELF MATCHES %@", regEx)
+        return pred.evaluate(with: stringMath)
+    }
+    
     func correctStringEquation()->Bool{
         let CaseSigns = ["--","+-","- -","+ -","++", "+ +","CaseSign"]
         var flag = false
-        for CaseSign in CaseSigns {
-            if (stringMath.contains(CaseSign) || stringMath.isEmpty){
-               return false
-            }else{
-                flag = true
+        
+        if(isInvalid()){
+            return false
+        }
+        else{
+            for CaseSign in CaseSigns {
+                if (stringMath.contains(CaseSign) || stringMath.isEmpty){
+                    return false
+                }else{
+                    flag = true
+                }
             }
         }
-        return flag
+          return flag
     }
+    
     
     func calculateString()->String
     {
