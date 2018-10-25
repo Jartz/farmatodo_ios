@@ -31,8 +31,8 @@ class FarmatodoUITests: XCTestCase {
     func testExample() {
         
         let app = XCUIApplication()
-        app.textFields["Introduce una ecuacion del tipo : 1+1"].tap()
-        app.textFields["Introduce una ecuacion del tipo : 1+1"].typeText("10+10")
+        app.textFields["Escribe tu ecuacion : 10+1"].tap()
+        app.textFields["Escribe tu ecuacion : 10+1"].typeText("10+10")
        
 
         let calcularEstasSeguroButton = app.buttons["Calcular ¿ Estas Seguro ?"]
@@ -40,14 +40,14 @@ class FarmatodoUITests: XCTestCase {
       
         let table = app.tables.element(boundBy: 0)
         XCTAssertEqual(table.cells.count, 0)
-        
-        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"UNIVERSE X SPECIAL: CAP 1 (2001)").element.tap()
-        app.staticTexts["UNIVERSE X SPECIAL: CAP 1 (2001)"].tap()
+
+        app.collectionViews.cells.otherElements.containing(.staticText, identifier:"Ultimate X-Men (Spanish Language Edition) (2000) #11").element.tap()
+        app.staticTexts["Ultimate X-Men (Spanish Language Edition) (2000) #11"].tap()
        
-        let universeXSpecialCap12001StaticText = app.staticTexts["UNIVERSE X SPECIAL: CAP 1 (2001)"]
+        let universeXSpecialCap12001StaticText = app.staticTexts["Ultimate X-Men (Spanish Language Edition) (2000) #11"]
         universeXSpecialCap12001StaticText.tap()
         
-        XCTAssertEqual("UNIVERSE X SPECIAL: CAP 1 (2001)",universeXSpecialCap12001StaticText.label)
+        XCTAssertEqual("Ultimate X-Men (Spanish Language Edition) (2000) #11",universeXSpecialCap12001StaticText.label)
   
     }
     
